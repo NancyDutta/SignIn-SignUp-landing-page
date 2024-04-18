@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory management</title>
+</head>
+<link rel="stylesheet" href="create_Acc.css">
+<body>
+    <main>
+        <div class="left">
+            <div class="heading"><h2>Inventory Management</h2></div>
+        </div>
+        <div class="right">
+
+            <form action="#">
+                <div class="contain">
+                <h1 class="create-heading">Sign in</h1>
+                <p class="para-top">See your growth and get support!</p>
+
+    
+                    <div class="input">
+                       Email : <input type="text" placeholder="Enter your email" id="email">
+                    </div>
+                    <div class="input">
+                       Password : <input type="text" placeholder="Enter your password" id="password">
+                       <p id="alert"></p>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox"><span class="remember"> Remember me</span> 
+                        <span class="forgot"><a href="">Forgot Password</a></span>
+
+                    </div>
+        
+                    <div class="button-cont">
+                        <button class="button" onclick="signIn()">Sign in</button>
+                        
+                    </div>
+                    <div class="para-top signIn">Not registered yet? <a href="create_Acc.html"> Create an account</a></div>
+                    
+                </div>
+                </div>
+                
+            </form>
+        </div>
+    </main>
+    <script>
+
+        function signIn(){
+            let email=document.getElementById('email').value;
+            let password=document.getElementById('password').value;
+            let checkbox=document.getElementById('checkbox');
+
+            
+
+            if(email == 'abc@gmail.com' && password == 'abc@123'){
+        alert("login successful");
+        window.location.assign("home.html");
+            }else if(email=='' || password == ''){
+                let error =document.getElementById('alert');
+                error.innerText='error';
+            }
+            else {
+let message=document.getElementById('alert');
+message.innerText='wrong password';
+            }
+        }
+
+
+    </script>
+</body>
+</html>

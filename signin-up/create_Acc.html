@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory management</title>
+</head>
+<link rel="stylesheet" href="create_Acc.css">
+<body>
+    <main>
+        <div class="left">
+            <div class="heading"><h2>Inventory Management</h2></div>
+        </div>
+        <div class="right">
+
+            <form action="#">
+                <div class="container">
+                <h1 class="create-heading">Create Account</h1>
+                <p class="para-top">See your growth and get support!</p>
+
+                <div class="form-input">
+                    <div class="input">
+                       Username : <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="input">
+                       Date Of Birth : <input type="date" placeholder="DD/MM/YYYY">
+                    </div>
+                    <div class="input">
+                       Email : <input type="text" placeholder="Enter your email" id="email">
+                    </div>
+                    <div class="input">
+                       Password : <input type="text" placeholder="Enter your password" id="password">
+                       <p id="alert"></p>
+                    </div>
+                    <div class="checkbox" > 
+                        <input type="checkbox"><span class="remember"> Remember me</span> 
+
+                    </div>
+        
+                </div>
+                <div class="button-cont">
+                    <button class="button" onclick=" return create()">Create account</button>
+
+                </div>
+               <div class="para-top signIn">Aleady have an account? <a href="SignIN.html"> Sign In</a></div>
+
+                </div>
+                
+            </form>
+        </div>
+    </main>
+    <script>
+        
+ function create(){
+    var a= document.getElementById("password").value;
+
+    if(a== ""){
+        document.getElementById("alert").innerText="** please fill password **";
+        return false;
+    }else
+    if(a.length < 8){
+        document.getElementById("alert").innerText="must contain 8 characters";
+        return false;
+    }else{
+        return true;
+    }
+    
+ }
+    </script>
+</body>
+</html>
